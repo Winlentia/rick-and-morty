@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7838B42525B371E7004EA87B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7838B42425B371E7004EA87B /* NetworkManager.swift */; };
+		7838B43425B3AC7B004EA87B /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7838B43325B3AC7B004EA87B /* Info.swift */; };
+		7838B43C25B3AC8F004EA87B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7838B43B25B3AC8F004EA87B /* Character.swift */; };
+		7838B44525B3ACCB004EA87B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7838B44425B3ACCB004EA87B /* AppConstants.swift */; };
 		78B307FD25B36BA700BCD64B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B307FC25B36BA700BCD64B /* AppDelegate.swift */; };
 		78B3080125B36BA700BCD64B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3080025B36BA700BCD64B /* HomeViewController.swift */; };
 		78B3080425B36BA700BCD64B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B3080225B36BA700BCD64B /* Main.storyboard */; };
@@ -45,6 +48,9 @@
 		5FAD33BF8427A2AD6551CC46 /* Pods-rick-and-mortyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rick-and-mortyTests.debug.xcconfig"; path = "Target Support Files/Pods-rick-and-mortyTests/Pods-rick-and-mortyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		713CD5F3D3D34B61172951E9 /* Pods-rick-and-mortyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rick-and-mortyTests.release.xcconfig"; path = "Target Support Files/Pods-rick-and-mortyTests/Pods-rick-and-mortyTests.release.xcconfig"; sourceTree = "<group>"; };
 		7838B42425B371E7004EA87B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7838B43325B3AC7B004EA87B /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		7838B43B25B3AC8F004EA87B /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		7838B44425B3ACCB004EA87B /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		78B307F925B36BA700BCD64B /* rick-and-morty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rick-and-morty.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78B307FC25B36BA700BCD64B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78B3080025B36BA700BCD64B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +113,24 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		7838B42D25B3AB3D004EA87B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7838B43325B3AC7B004EA87B /* Info.swift */,
+				7838B43B25B3AC8F004EA87B /* Character.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7838B44325B3ACBA004EA87B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				78B3080525B36BAA00BCD64B /* Assets.xcassets */,
+				7838B44425B3ACCB004EA87B /* AppConstants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		78B307F025B36BA700BCD64B = {
 			isa = PBXGroup;
 			children = (
@@ -132,11 +156,12 @@
 		78B307FB25B36BA700BCD64B /* rick-and-morty */ = {
 			isa = PBXGroup;
 			children = (
+				7838B44325B3ACBA004EA87B /* Resources */,
+				7838B42D25B3AB3D004EA87B /* Models */,
 				7838B42225B3719A004EA87B /* Controller */,
 				7838B42125B3715F004EA87B /* Networking */,
 				78B307FC25B36BA700BCD64B /* AppDelegate.swift */,
 				78B3080225B36BA700BCD64B /* Main.storyboard */,
-				78B3080525B36BAA00BCD64B /* Assets.xcassets */,
 				78B3080725B36BAA00BCD64B /* LaunchScreen.storyboard */,
 				78B3080A25B36BAA00BCD64B /* Info.plist */,
 			);
@@ -423,6 +448,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7838B42525B371E7004EA87B /* NetworkManager.swift in Sources */,
+				7838B44525B3ACCB004EA87B /* AppConstants.swift in Sources */,
+				7838B43425B3AC7B004EA87B /* Info.swift in Sources */,
+				7838B43C25B3AC8F004EA87B /* Character.swift in Sources */,
 				78B3080125B36BA700BCD64B /* HomeViewController.swift in Sources */,
 				78B307FD25B36BA700BCD64B /* AppDelegate.swift in Sources */,
 			);
