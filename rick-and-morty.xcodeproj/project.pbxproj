@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		78B307FD25B36BA700BCD64B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B307FC25B36BA700BCD64B /* AppDelegate.swift */; };
-		78B307FF25B36BA700BCD64B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B307FE25B36BA700BCD64B /* SceneDelegate.swift */; };
-		78B3080125B36BA700BCD64B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3080025B36BA700BCD64B /* ViewController.swift */; };
+		78B3080125B36BA700BCD64B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3080025B36BA700BCD64B /* HomeViewController.swift */; };
 		78B3080425B36BA700BCD64B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B3080225B36BA700BCD64B /* Main.storyboard */; };
 		78B3080625B36BAA00BCD64B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78B3080525B36BAA00BCD64B /* Assets.xcassets */; };
 		78B3080925B36BAA00BCD64B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B3080725B36BAA00BCD64B /* LaunchScreen.storyboard */; };
@@ -37,8 +36,7 @@
 /* Begin PBXFileReference section */
 		78B307F925B36BA700BCD64B /* rick-and-morty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rick-and-morty.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78B307FC25B36BA700BCD64B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		78B307FE25B36BA700BCD64B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		78B3080025B36BA700BCD64B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		78B3080025B36BA700BCD64B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		78B3080325B36BA700BCD64B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78B3080525B36BAA00BCD64B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78B3080825B36BAA00BCD64B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,8 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				78B307FC25B36BA700BCD64B /* AppDelegate.swift */,
-				78B307FE25B36BA700BCD64B /* SceneDelegate.swift */,
-				78B3080025B36BA700BCD64B /* ViewController.swift */,
+				78B3080025B36BA700BCD64B /* HomeViewController.swift */,
 				78B3080225B36BA700BCD64B /* Main.storyboard */,
 				78B3080525B36BAA00BCD64B /* Assets.xcassets */,
 				78B3080725B36BAA00BCD64B /* LaunchScreen.storyboard */,
@@ -258,9 +255,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78B3080125B36BA700BCD64B /* ViewController.swift in Sources */,
+				78B3080125B36BA700BCD64B /* HomeViewController.swift in Sources */,
 				78B307FD25B36BA700BCD64B /* AppDelegate.swift in Sources */,
-				78B307FF25B36BA700BCD64B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +435,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9A26P3RMBN;
 				INFOPLIST_FILE = "rick-and-morty/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,6 +455,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9A26P3RMBN;
 				INFOPLIST_FILE = "rick-and-morty/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
