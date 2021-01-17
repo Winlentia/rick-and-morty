@@ -12,7 +12,7 @@ protocol RickAndMortyApiProvider {
                            onFailure: @escaping (_ error : NetworkError) -> ())
 }
 
-enum NetworkEndpoints {
+enum RickAndMortyApiEndpoints {
     case character
     case characterDetail(id : Int)
     
