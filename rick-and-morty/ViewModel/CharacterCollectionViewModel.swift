@@ -7,10 +7,10 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class CharacterCollectionViewModel {
     var character : Character
-    var image : UIImage?
     var title : String
     
     init(character : Character) {
@@ -18,7 +18,18 @@ class CharacterCollectionViewModel {
         self.title = character.name
     }
     
-    func getStatusString(status : String) -> String {
+    func getImageUrl() -> URL{
+        guard let url = URL(string: character.image) else {
+            fatalError("url problem")
+        }
+        return url
+    }
+    
+    func getSubtitleString() -> String {
+        return "\(getStatusString(status: character.status)) \(getSpeciesString(species: character.species))"
+    }
+    
+    private func getStatusString(status : String) -> String {
         let preText = AppConstants.StringResources.CharacterCell.statusPreText
         switch status {
         case "Alive":
@@ -30,7 +41,7 @@ class CharacterCollectionViewModel {
         }
     }
     
-    func getSpeciesString(species : String) -> String {
+    private func getSpeciesString(species : String) -> String {
         let preText = AppConstants.StringResources.CharacterCell.speciesPreText
         switch species {
         case "Human":

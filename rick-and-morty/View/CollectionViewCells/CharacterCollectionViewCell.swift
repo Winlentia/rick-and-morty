@@ -9,6 +9,7 @@
 import UIKit
 import DisplaySwitcher
 
+
 private let avatarListLayoutSize: CGFloat = 80.0
 
 class CharacterCollectionViewCell: UICollectionViewCell, CellInterface {
@@ -36,7 +37,10 @@ class CharacterCollectionViewCell: UICollectionViewCell, CellInterface {
     fileprivate var avatarGridLayoutSize: CGFloat = 0.0
     fileprivate var initialLabelsLeadingConstraintValue: CGFloat = 0.0
     
-    func bind(_ character: Character) {
+    func bind(viewModel: CharacterCollectionViewModel) {
+        avatarImageView.kf.setImage(with: viewModel.getImageUrl())
+        nameListLabel.text = viewModel.title
+        statisticLabel.text = viewModel.getSubtitleString()
 //        avatarImageView.image = user.avatar
 //        nameListLabel.text = user.name.localized + " " + user.surname.localized
 //        nameGridLabel.text = nameListLabel.text
