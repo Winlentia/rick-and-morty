@@ -11,7 +11,7 @@ import DisplaySwitcher
 private let animationDuration: TimeInterval = 0.3
 
 private let listLayoutStaticCellHeight: CGFloat = 80
-private let gridLayoutStaticCellHeight: CGFloat = 165
+private let gridLayoutStaticCellHeight: CGFloat = 180
 
 class HomeViewController: BaseViewController {
     
@@ -19,6 +19,7 @@ class HomeViewController: BaseViewController {
     fileprivate var isTransitionAvailable = true
     
     
+    @IBOutlet weak var rotationButton: SwitchLayoutButton!
     @IBOutlet weak var collectionView: UICollectionView!
     fileprivate lazy var listLayout = DisplaySwitchLayout(
         staticCellHeight: listLayoutStaticCellHeight,
@@ -34,11 +35,9 @@ class HomeViewController: BaseViewController {
     
     
     fileprivate func getPageData(_ viewModel: HomeViewModel) {
-        // Do any additional setup after loading the view.
         viewModel.fetch {
             //bind data
             self.collectionView.reloadData()
-            print(viewModel.pageData)
         } onFailure: { (err) in
             //todo handle error
             print(err)
@@ -48,8 +47,10 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .red
+        rotationButton.isSelected = true
         getPageData(viewModel)
         setupCollectionView()
+        
 
     }
     
@@ -60,7 +61,33 @@ class HomeViewController: BaseViewController {
         collectionView.register(CharacterCollectionViewCell.cellNib, forCellWithReuseIdentifier: CharacterCollectionViewCell.id)
     }
 
-
+    @IBAction func changeLayoutPressed(_ sender: Any) {
+        if !isTransitionAvailable {
+            return
+        }
+        let transitionManager: TransitionManager
+        if layoutState == .list {
+            layoutState = .grid
+            transitionManager = TransitionManager(
+                duration: animationDuration,
+                collectionView: collectionView!,
+                destinationLayout: gridLayout,
+                layoutState: layoutState
+            )
+        } else {
+            layoutState = .list
+            transitionManager = TransitionManager(
+                duration: animationDuration,
+                collectionView: collectionView!,
+                destinationLayout: listLayout,
+                layoutState: layoutState
+            )
+        }
+        transitionManager.startInteractiveTransition()
+        rotationButton.isSelected = layoutState == .list
+        rotationButton.animationDuration = animationDuration
+    }
+    
 }
 
 extension HomeViewController : UICollectionViewDataSource {

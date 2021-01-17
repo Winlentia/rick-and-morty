@@ -40,6 +40,7 @@ class CharacterCollectionViewCell: UICollectionViewCell, CellInterface {
     func bind(viewModel: CharacterCollectionViewModel) {
         avatarImageView.kf.setImage(with: viewModel.getImageUrl())
         nameListLabel.text = viewModel.title
+        nameGridLabel.text = viewModel.title
         statisticLabel.text = viewModel.getSubtitleString()
 //        avatarImageView.image = user.avatar
 //        nameListLabel.text = user.name.localized + " " + user.surname.localized
