@@ -7,19 +7,26 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
     override func viewDidLoad() {
+        
+        var viewModel = HomeViewModel(apiProvider: RickAndMortyApi())
+        
         super.viewDidLoad()
         self.view.backgroundColor = .red
         // Do any additional setup after loading the view.
-        var api = RickAndMortyApi()
-        
-        api.getCharactersData { (result) in
-            print(result)
+        viewModel.fetch {
+            //bind data
+            print(viewModel.pageData)
         } onFailure: { (err) in
+            //todo handle error
             print(err)
         }
+
 
     }
 
