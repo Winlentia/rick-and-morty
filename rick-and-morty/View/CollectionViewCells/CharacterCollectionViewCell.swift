@@ -1,8 +1,9 @@
 //
-//  CharacterCollectionViewCell.swift
-//  rick-and-morty
+//  UserCollectionViewCell.swift
+//  YALLayoutTransitioning
 //
-//  Created by Winlentia on 17.01.2021.
+//  Created by Roman on 23.02.16.
+//  Copyright © 2016 Yalantis. All rights reserved.
 //
 
 import UIKit
@@ -17,27 +18,25 @@ class CharacterCollectionViewCell: UICollectionViewCell, CellInterface {
     @IBOutlet fileprivate weak var nameListLabel: UILabel!
     @IBOutlet fileprivate weak var nameGridLabel: UILabel!
     @IBOutlet weak var statisticLabel: UILabel!
-
+    
     // avatarImageView constraints
     @IBOutlet fileprivate weak var avatarImageViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet fileprivate weak var avatarImageViewHeightConstraint: NSLayoutConstraint!
-
+    
     // nameListLabel constraints
     @IBOutlet var nameListLabelLeadingConstraint: NSLayoutConstraint! {
         didSet {
             initialLabelsLeadingConstraintValue = nameListLabelLeadingConstraint.constant
         }
     }
-
+    
     // statisticLabel constraints
     @IBOutlet weak var statisticLabelLeadingConstraint: NSLayoutConstraint!
-    
-    
     
     fileprivate var avatarGridLayoutSize: CGFloat = 0.0
     fileprivate var initialLabelsLeadingConstraintValue: CGFloat = 0.0
     
-//    func bind(_ user: Character) {
+    func bind(_ character: Character) {
 //        avatarImageView.image = user.avatar
 //        nameListLabel.text = user.name.localized + " " + user.surname.localized
 //        nameGridLabel.text = nameListLabel.text
@@ -45,10 +44,6 @@ class CharacterCollectionViewCell: UICollectionViewCell, CellInterface {
 //        let userCommentsString = (String(user.commentsCount) + " comments • ").localized
 //        let userLikesString = (String(user.likesCount) + " likes").localized
 //        statisticLabel.text = userPostsString + userCommentsString + userLikesString
-//    }
-    
-    func bind(viewModel : CharacterCollectionViewModel){
-        //todo
     }
     
     func setupGridLayoutConstraints(_ transitionProgress: CGFloat, cellWidth: CGFloat) {
@@ -67,7 +62,7 @@ class CharacterCollectionViewCell: UICollectionViewCell, CellInterface {
         avatarImageViewHeightConstraint.constant = ceil(
             avatarGridLayoutSize - (avatarGridLayoutSize - avatarListLayoutSize) * transitionProgress
         )
-        avatarImageViewWidthConstraint.constant = avatarImageViewHeightConstraint.constant
+        avatarImageViewWidthConstraint.constant = avatarImageViewHeightConstraint.constant 
         nameListLabelLeadingConstraint.constant = avatarImageViewWidthConstraint.constant * transitionProgress + (initialLabelsLeadingConstraintValue - avatarImageViewHeightConstraint.constant)
         statisticLabelLeadingConstraint.constant = nameListLabelLeadingConstraint.constant
         backgroundGradientView.alpha = transitionProgress <= 0.5 ? 1 - transitionProgress : transitionProgress
@@ -92,4 +87,3 @@ class CharacterCollectionViewCell: UICollectionViewCell, CellInterface {
     }
     
 }
-

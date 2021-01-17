@@ -12,4 +12,11 @@ struct AppConstants {
         static var baseUrl = "https://rickandmortyapi.com/api/"
         static var character = "character"
     }
+    
+    struct StringResources {
+        struct CharacterCell {
+            static let statusPreText = "Status"
+            static let speciesPreText = "Species"
+        }
+    }
 }
