@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (5.0.0)
+  - DisplaySwitcher (2.0)
 
 DEPENDENCIES:
   - Alamofire (= 5.0.0)
+  - DisplaySwitcher (= 2.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - DisplaySwitcher
 
 SPEC CHECKSUMS:
   Alamofire: 58ff2bfb8daaacaa233d5c36e37b10a5248f59b1
+  DisplaySwitcher: 1db23ee6a45fbebac733917cc002204adad37d28
 
-PODFILE CHECKSUM: f675af1def2c32f85e2e1ebd0827c825238b64a4
+PODFILE CHECKSUM: 193878b4d2f138f6fae3edaa0e2cf54a10be02da
 
 COCOAPODS: 1.9.3

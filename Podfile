@@ -7,6 +7,7 @@ target 'rick-and-morty' do
 
   # Pods for rick-and-morty
   pod 'Alamofire', '5.0.0'
+  pod ‘DisplaySwitcher’,'2.0'
   target 'rick-and-mortyTests' do
     inherit! :search_paths
     # Pods for testing

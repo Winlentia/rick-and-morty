@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-rick-and-morty-rick-and-mortyUITests/Pods-rick-and-morty-rick-and-mortyUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/DisplaySwitcher/DisplaySwitcher.framework
