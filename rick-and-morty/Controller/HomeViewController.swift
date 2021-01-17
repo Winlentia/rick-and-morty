@@ -13,6 +13,14 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .red
         // Do any additional setup after loading the view.
+        var api = RickAndMortyApi()
+        
+        api.getCharactersData { (result) in
+            print(result)
+        } onFailure: { (err) in
+            print(err)
+        }
+
     }
 
 

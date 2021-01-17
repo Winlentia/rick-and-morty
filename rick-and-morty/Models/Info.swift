@@ -8,7 +8,7 @@
 import Foundation
 
 struct Info : Codable {
-    var count : Int?
-    var pages : Int?
-    var next : String?
+    var count : Int
+    var pages : Int
+    var next : String
 }

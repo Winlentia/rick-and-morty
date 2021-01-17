@@ -9,6 +9,7 @@ import Foundation
 
 struct AppConstants {
     struct Network {
-        var baseUrl = "https://rickandmortyapi.com/api/"
+        static var baseUrl = "https://rickandmortyapi.com/api/"
+        static var character = "character"
     }
 }
