@@ -9,7 +9,7 @@ import Foundation
 
 struct RickAndMortyApi : RickAndMortyApiProvider {
     func getCharactersData(onSuccess: @escaping ([Character]) -> (), onFailure: @escaping (NetworkError) -> ()) {
-        let requestUrl = AppConstants.Network.baseUrl + AppConstants.Network.character
+        let requestUrl = NetworkEndpoints.character.url
         
         guard let url = URL(string: requestUrl) else {
             fatalError("url  failure")
