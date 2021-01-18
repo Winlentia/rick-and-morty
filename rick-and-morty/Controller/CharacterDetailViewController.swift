@@ -19,11 +19,28 @@ class CharacterDetailViewController: UIViewController {
         super.viewDidLoad()
         if let char = character {
             let viewModel = CharacterDetailViewModel(character: char)
+            self.image.contentMode = .scaleAspectFill
             self.image.kf.setImage(with: viewModel.getImageUrl())
-            self.titleLabel.text = viewModel.getTitle()
+            setupTitleLabel(text: viewModel.getTitle())
+            self.title = viewModel.character.name
         }else {
             self.navigationController?.popViewController(animated: true)
         }
+        
+        
+    }
+    
+    fileprivate func setupTitleLabel(text : String){
+        let splittedArray = text.split(separator: "\n")
+        let attributedString = NSMutableAttributedString()
+        for (index,str) in splittedArray.enumerated() {
+            if(index == 0){
+                attributedString.append(NSAttributedString(string: String("\(str) \n\n"), attributes: AppConstants.Attributes.fontAttributeTitle))
+            }else {
+                attributedString.append(NSAttributedString(string: String("\(str) \n"), attributes: AppConstants.Attributes.fontAttribute))
+            }
+        }
+        self.titleLabel.attributedText = attributedString
     }
     
     

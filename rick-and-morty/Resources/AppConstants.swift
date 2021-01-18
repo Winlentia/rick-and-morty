@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct AppConstants {
     struct Network {
@@ -18,5 +19,11 @@ struct AppConstants {
             static let statusPreText = "Status"
             static let speciesPreText = "Species"
         }
+    }
+    
+    struct Attributes{
+        
+        static let fontAttributeTitle = [ NSAttributedString.Key.font: UIFont(name: "Copperplate", size: 32)! ]
+        static let fontAttribute = [ NSAttributedString.Key.font: UIFont(name: "Copperplate", size: 20)! ]
     }
 }

@@ -222,8 +222,8 @@
 		78C4D68025B470E400E8400E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				78E523EF25B5EF5200615539 /* CollectionView */,
 				78C4D68125B4711400E8400E /* HomeViewModel.swift */,
-				78C4D6A825B48BA700E8400E /* CharacterCollectionViewModel.swift */,
 				784E801925B4DF5400D9D466 /* CharacterDetailViewModel.swift */,
 				784E801E25B5DC4400D9D466 /* CharacterViewModel.swift */,
 			);
@@ -254,6 +254,14 @@
 				78C4D6A325B4887500E8400E /* CellProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		78E523EF25B5EF5200615539 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				78C4D6A825B48BA700E8400E /* CharacterCollectionViewModel.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		95F993F396BACBC18AA8CEF7 /* Pods */ = {
