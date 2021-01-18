@@ -95,6 +95,52 @@
             </objects>
             <point key="canvasLocation" x="1031.8840579710145" y="114.1304347826087"/>
         </scene>
+        <!--Character Detail View Controller-->
+        <scene sceneID="UyI-Iq-21u">
+            <objects>
+                <viewController storyboardIdentifier="CharacterDetailViewControllerIdentity" id="AIF-2Z-GFl" customClass="CharacterDetailViewController" customModule="rick_and_morty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KOY-vG-Qsc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rnm-background-2" translatesAutoresizingMaskIntoConstraints="NO" id="T95-pg-sjj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KdR-9v-5GN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="294.33333333333331"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rick" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3t-fz-mV8">
+                                <rect key="frame" x="20" y="314.33333333333331" width="374" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FpD-qv-i5x"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KdR-9v-5GN" firstAttribute="height" secondItem="KOY-vG-Qsc" secondAttribute="height" multiplier="0.4" id="D6o-kR-gYd"/>
+                            <constraint firstItem="T95-pg-sjj" firstAttribute="bottom" secondItem="KOY-vG-Qsc" secondAttribute="bottom" id="JNc-3u-B04"/>
+                            <constraint firstItem="KdR-9v-5GN" firstAttribute="trailing" secondItem="FpD-qv-i5x" secondAttribute="trailing" id="OFg-cY-HSN"/>
+                            <constraint firstItem="g3t-fz-mV8" firstAttribute="leading" secondItem="FpD-qv-i5x" secondAttribute="leading" constant="20" id="OSE-NH-9rZ"/>
+                            <constraint firstItem="T95-pg-sjj" firstAttribute="top" secondItem="KOY-vG-Qsc" secondAttribute="top" id="YC2-bA-3HJ"/>
+                            <constraint firstItem="T95-pg-sjj" firstAttribute="leading" secondItem="KOY-vG-Qsc" secondAttribute="leading" id="cSI-Zr-DVP"/>
+                            <constraint firstItem="g3t-fz-mV8" firstAttribute="top" secondItem="KdR-9v-5GN" secondAttribute="bottom" constant="20" id="m59-ht-RtI"/>
+                            <constraint firstItem="FpD-qv-i5x" firstAttribute="trailing" secondItem="g3t-fz-mV8" secondAttribute="trailing" constant="20" id="v0Y-o1-Kqd"/>
+                            <constraint firstItem="T95-pg-sjj" firstAttribute="trailing" secondItem="KOY-vG-Qsc" secondAttribute="trailing" id="wTB-S7-wIB"/>
+                            <constraint firstItem="KdR-9v-5GN" firstAttribute="top" secondItem="FpD-qv-i5x" secondAttribute="top" id="yft-vF-Pfw"/>
+                            <constraint firstItem="KdR-9v-5GN" firstAttribute="leading" secondItem="FpD-qv-i5x" secondAttribute="leading" id="zc4-rl-RY5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="KdR-9v-5GN" id="IEH-7y-7B8"/>
+                        <outlet property="titleLabel" destination="g3t-fz-mV8" id="Xju-84-9Bp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k3c-56-47C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1823.1884057971015" y="114.1304347826087"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="34D-Ai-xrr">
             <objects>

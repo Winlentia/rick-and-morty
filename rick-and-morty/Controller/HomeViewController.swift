@@ -13,7 +13,7 @@ private let animationDuration: TimeInterval = 0.3
 private let listLayoutStaticCellHeight: CGFloat = 80
 private let gridLayoutStaticCellHeight: CGFloat = 180
 
-class HomeViewController: BaseViewController {
+class HomeViewController: UIViewController {
     
     var viewModel = HomeViewModel(apiProvider: RickAndMortyApi())
     fileprivate var isTransitionAvailable = true
@@ -137,6 +137,9 @@ extension HomeViewController : UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView,didSelectItemAt indexPath: IndexPath) {
-        //route to  other page
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let detailViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CharacterDetailViewControllerIdentity") as! CharacterDetailViewController
+        detailViewController.character = self.viewModel.pageData![indexPath.row]
+        self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

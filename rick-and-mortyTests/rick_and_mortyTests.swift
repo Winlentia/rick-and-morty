@@ -29,5 +29,21 @@ class rick_and_mortyTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testCharacterViewModel() {
+        let rick = Character(id: 1,
+                                  name: "Rick Sanchez",
+                                  status: "Alive",
+                                  species: "Human",
+                                  type: "",
+                                  gender: "Male",
+                                  image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg")
+        
+        let characterViewModel = CharacterViewModel(character: rick)
+        XCTAssertEqual(characterViewModel.getSpeciesString(), "Species :👤", "Species test failure")
+        
+        XCTAssertEqual(characterViewModel.getStatusString(), "Status :Alive 🟢", "Status test failure")
+        
+    }
 
 }
