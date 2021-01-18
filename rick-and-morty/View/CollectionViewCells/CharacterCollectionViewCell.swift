@@ -42,13 +42,6 @@ class CharacterCollectionViewCell: UICollectionViewCell, CellInterface {
         nameListLabel.text = viewModel.title
         nameGridLabel.text = viewModel.title
         statisticLabel.text = viewModel.getSubtitleString()
-//        avatarImageView.image = user.avatar
-//        nameListLabel.text = user.name.localized + " " + user.surname.localized
-//        nameGridLabel.text = nameListLabel.text
-//        let userPostsString = (String(user.postsCount) + " posts • ").localized
-//        let userCommentsString = (String(user.commentsCount) + " comments • ").localized
-//        let userLikesString = (String(user.likesCount) + " likes").localized
-//        statisticLabel.text = userPostsString + userCommentsString + userLikesString
     }
     
     func setupGridLayoutConstraints(_ transitionProgress: CGFloat, cellWidth: CGFloat) {
